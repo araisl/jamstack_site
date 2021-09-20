@@ -1,0 +1,15 @@
+---
+title: Golfanlagen!
+layout: base.njk
+---
+
+<div class="container">
+  <h1>Alle Golfanlagen</h1>
+
+  <ul>
+    {% for item in golf_courses %}
+      <li> {{ item.golf_course.name }}
+    {% endfor %}
+  </ul>
+
+</div>

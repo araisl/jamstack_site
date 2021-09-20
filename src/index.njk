@@ -15,7 +15,19 @@ layout: base.njk
     <h2>Always love and peace!</h2>
   </div>
 
-  <p> Extra text to check the live Deployment! </p>
+  <ul>
+
+    {% for article in news.articles %}
+
+      <!-- <li> {{ item.golf_course.name }} -->
+
+      <li><h2><a href="{{ article.url }}"> {{ article.title }} </a></h2> </li>
+      <span> {{ article.source.name }} </span> - <time> {{ article.publishedAt }} </time>
+
+    {% endfor %}
+
+
+  </ul>
 
 </div>
 <script src="js/vibe.js"></script>
