@@ -1,0 +1,15 @@
+---
+title: Paths!
+layout: base.njk
+---
+
+<div class="container">
+  <h1>Alle Paths</h1>
+
+  <ul>
+    {% for item in paths.pages %}
+      <li> {{ item.slug }} </li>
+    {% endfor %}
+  </ul>
+
+</div>

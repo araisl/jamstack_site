@@ -1,15 +1,50 @@
 ---
-title: Golfanlagen!
+title: Alle Golfanlagen!
 layout: base.njk
 ---
 
-<div class="container">
-  <h1>Alle Golfanlagen</h1>
+
+<div class="head">
+  <div class="container">
+    <div class="topic">
+    <h1>Golfanlagen des Mercedes-Benz After Work Golf Cup</h1>
+    </div>
+  </div>
+</div>
 
   <ul>
-    {% for item in golf_courses %}
-      <li> {{ item.golf_course.name }}
-    {% endfor %}
+  {% for item in golf_courses[0].golf_courses %}
+
+    <li> {{ item.golf_course.name }} </li>
+
+  {% endfor %}
   </ul>
+
+
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Golfanlage</th>
+        <th>Region</th>
+        <th>Ort</th>
+        <th class="hideinmobile">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for item in golf_courses[0].golf_courses %}
+        <tr itemscope="itemscope" itemtype="http://schema.org/GolfCourse">
+          <td itemprop="name"> {{  item.golf_course.name }} </td>
+          <td> {{  item.golf_course.region.name }} </td>
+          <td> {{ item.golf_course.town }} </td>
+          <td class="details"> <a href="#"> Anzeigen </a> </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
 
 </div>

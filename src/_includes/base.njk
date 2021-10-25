@@ -14,13 +14,21 @@
     }
     .love {
       color: red;
+      font-size: 4em;
+    }
+    .head {
+      position:relative;
+      overflow:hidden;
+      min-height:225px;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <a href="/">Home</a> | <a href="/about">About</a> | <a href="/golf_courses">Alle Golfplätze</a>
+    <a href="/">Home</a> | <a href="/about">About</a>
+     | <a href="/golf_courses">Alle Golfplätze</a>
+     | <a href="/paths">All Paths</a>
   </header>
 
   {{ content | safe }}

@@ -1,0 +1,20 @@
+---
+title: Golfanlagen!
+layout: base.njk
+#pagination:
+  #data: golf_courses
+  #size: 1
+  #alias: golf_courses
+
+---
+
+<div class="container">
+  <h1>Alle Golfanlagen</h1>
+
+  <ul>
+    {% for item in golf_courses %}
+      <li> {{ item.golf_course.name }}
+    {% endfor %}
+  </ul>
+
+</div>

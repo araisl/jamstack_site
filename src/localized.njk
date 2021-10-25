@@ -1,6 +1,11 @@
 ---
-title: This is a Jamstack page for you!
+title: Daily briefing!
 layout: base.njk
+pagination:
+  data: news
+  size: 1
+  alias: news
+permalink: /{{ news.country }}/index.html
 ---
 
 <div class="container">
@@ -17,7 +22,7 @@ layout: base.njk
 
   <ul>
 
-    {% for article in news[0].articles %}
+    {% for article in news.articles %}
 
       <li><h2><a href="{{ article.url }}"> {{ article.title }} </a></h2> </li>
       <span> {{ article.source.name }} </span> - <time> {{ article.publishedAt }} </time>

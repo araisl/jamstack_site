@@ -9,4 +9,11 @@ layout: base.njk
 
 <p> It was made for you using HTML, CSS and JavaScript. And served as a JAMStack Site! </p>
 
+{% for item in news %}
+
+  <a href="/{{ item.country }}"> {{ item.country }} </a>
+  <br>
+
+{% endfor %}
+
 <script src="vibe.js"></script>
